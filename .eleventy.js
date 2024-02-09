@@ -1,4 +1,5 @@
 const Image = require("@11ty/eleventy-img");
+const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 async function imageShortcode(src, alt, sizes) {
   let metadata = await Image(`./src${src}`, {
@@ -27,6 +28,7 @@ module.exports = function (eleventyConfig) {
     return new Date().getFullYear()
   });
   eleventyConfig.addNunjucksAsyncShortcode("EleventyImage", imageShortcode);
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   return {
     dir: {
       input: "src",
