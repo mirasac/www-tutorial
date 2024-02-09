@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy",
-    "build-prod": "npx @11ty/eleventy --pathprefix 'www-tutorial'"
+    "build-prod": "npx @11ty/eleventy --pathprefix www-tutorial"
   },
   "keywords": [],
   "author": "",
